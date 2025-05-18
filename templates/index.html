@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EyeSync</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" style="width: 50px; height: auto;">
+            <h1>EyeSync</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#check-symmetry">Check Eye Symmetry</a></li>
+                <li><a href="#tips">Tips</a></li>
+                <li><a href="https://mail.google.com/mail/?view=cm&to=eyesyncofficial@gmail.com" target="_blank">Contact Us</a></li>
+
+            </ul>            
+        </nav>
+    </header>
+
+    <main>
+        <!-- Upload Section -->
+        <section id="check-symmetry" class="upload-section">
+            <h2>Check Your Eye Symmetry</h2>
+            <p>Upload a photo of yourself and let the AI determine your eye symmetry.</p>
+
+            <!-- Form to upload an image for analysis  -->
+            <form action="/" method="POST" enctype="multipart/form-data">
+                <input type="file" name="image" id="image-upload" accept="image/*" required>
+                <button type="analyze">Analyze</button>
+            </form>
+        
+
+    
+
+            
+            {% if result_link %}
+            <div>
+            <p>Result ready! <a href="{{ result_link }}">Click here to view the result</a>.</p>
+            </div>
+            {% endif %}
+
+            
+
+        </section>
+
+        <!-- Tips Section -->
+        <section id="tips" class="tips-section">
+            <h1>Tips to Get the Best Out of EyeSync</h1>
+            <p>Maximize the accuracy of your eye symmetry analysis with these simple steps.</p>
+            <div class="tips-container">
+                <div class="tip-card">
+                    <h3>Use Good Lighting</h3>
+                    <p>Ensure your face is well-lit, with even lighting to avoid shadows that might distort your facial features. Natural daylight is preferable, facing towards the light source.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>Frontal Pose</h3>
+                    <p>Take the photo with your face directly facing the camera, maintaining a neutral expression. This position helps the AI accurately assess your eye symmetry.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>Clear Background</h3>
+                    <p>Use a simple, uncluttered background to ensure there's a clear contrast between your face and the surroundings. This helps the AI focus on analyzing your eye features without distractions.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>Avoid Obstructions</h3>
+                    <p>Make sure your hair is pulled back and that glasses or other accessories are removed. Obstructions can interfere with the symmetry analysis, affecting the accuracy of the results.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 EyeSync. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    
+
+
+</body>
+</html>

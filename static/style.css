@@ -1,0 +1,427 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  height:65px;
+  position: fixed;
+  margin-top: -150px;
+  width: 98%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  height: auto;
+  font-size: 10px;
+  height:30px;
+}
+
+.logo h1 {
+  font-size: 2.7rem;
+  color: black;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 2.1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #6c63ff;
+}
+
+.upload-section {
+  text-align: center;
+  margin: 2rem auto;
+  padding: 3rem;
+  background: linear-gradient(135deg, #584adb, #968bf1);
+  border-radius: 10px;
+  color: #fff;
+  width: 50%;
+  margin-top: 150px;
+  height: 290px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.upload-section h2 {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.upload-section p {
+  font-size: 1.9rem;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* Space between the input and button */
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+  margin: 0 auto;
+}
+
+input[type="file"] {
+  font-size: 1.2rem;
+  color: black;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 250px; /* Ensures consistent width */
+  background-color: #f4f4f4;
+  cursor: pointer;
+}
+
+
+button {
+  font-size: 1.2rem;
+  color: white;
+  background-color: #6c63ff;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #554bd1;
+  transform: scale(1.05);
+}
+
+
+.tips-section {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.tips-section h1 {
+  font-size: 2.6rem;
+  margin-bottom: 0.3rem;
+}
+
+.tips-section p {
+  color: #666;
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+}
+
+.tips-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.2rem;
+}
+
+.tip-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 15%;
+  padding: 2rem;
+  text-align: center;
+  height:auto;
+  margin-top: 30px;
+}
+
+.tip-card h3 {
+  font-size: 1.6rem;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.tip-card p {
+  color: #666;
+  font-family: Arial, sans-serif;
+  font-size: 1.4rem;
+}
+
+
+.footer {
+  background: linear-gradient(135deg, #584adb, #968bf1);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+  margin: 0.5rem 0;
+   font-family: Arial, sans-serif;
+  font-size: 2.2rem;
+}
+
+
+/*responsive min-width:480 from max-width:768px*/
+@media (min-width:480px) and (max-width: 768px) {
+  .nav-links {
+    margin-right: 35px;
+  }
+
+  .upload-section {
+    padding: 2rem;
+    height:auto;
+    width: 100%;
+    border-radius: 0%;
+  }
+
+  form {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  input[type="file"] {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .tips-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-right: 30px;
+  }
+
+  .tips-section h1 {
+    font-size: 1.9rem;
+  }
+
+  .tips-section p {
+    font-size: 1.4rem;
+  }
+
+  .tip-card {
+    width: 100%;
+    height: auto;
+    margin-left: 20px;
+  }
+
+  .tip-card h3 {
+    font-size: 1.7rem;
+    font-weight: 700;
+  }
+  
+  .tip-card p {
+    font-size: 1.4rem;
+  }
+    
+
+  .footer {
+    text-align: center;
+    width:100%;
+  }
+
+  .footer p {
+    font-size: 1.8rem;
+  }
+}
+
+/*responsive start from max-width:480px*/
+@media (max-width: 479px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-top: 5px;
+  }
+
+  .logo h1 {
+    font-size: 2.3rem;
+    margin-left: 10px;
+  }
+
+  .nav-links a {
+     display: none;
+  }
+
+  .upload-section {
+    padding: 2rem;
+    height:auto;
+    border-radius: 0%;
+    width: 100%;
+  }
+
+  .upload-section h2 {
+    font-size: 2rem;
+  }
+
+  .upload-section p {
+    font-size: 1.2rem;
+  }
+
+  form {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  input[type="file"] {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .tips-section {
+    margin-left: 40px;
+  }
+
+  .tips-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .tips-section p {
+    font-size: 1.2rem;
+  }
+
+  .tip-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer {
+    padding:33px;
+    width: 100%;
+  }
+
+  .footer p {
+    font-size: 1.4rem;
+  }
+}
+
+
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .header {
+    padding: 1.5rem 3rem;
+  }
+
+  .logo h1 {
+    font-size: 2.2rem;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .upload-section {
+    padding: 3rem 2rem;
+    max-width: auto;
+    height: auto;
+    
+  }
+
+  .upload-section h2 {
+    font-size: 2.8rem;
+  }
+
+  .upload-section p {
+    font-size: 1.6rem;
+  }
+
+  form {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  input[type="file"] {
+    width: 300px;
+  }
+  
+
+  button {
+    width: auto;
+  }
+
+  .tips-container {
+    gap: 2rem;
+  }
+
+  .tip-card {
+    width: 280px;
+  }
+
+  .footer {
+    padding: 1.5rem;
+  }
+
+  .footer p {
+    font-size: 1.5rem;
+  }
+}
+
+
+.result-link-container {
+  background-color: #eafaf1;
+  border: 1px solid #16A085;
+  padding: 20px;
+  margin-top: 30px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-link-container p {
+  font-size: 18px;
+  color: #2C3E50;
+  margin: 0;
+}
+
+.result-link-container a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #3498DB;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.result-link-container a:hover {
+  color: #2980B9;
+}
+
+.result-link-container a:focus {
+  outline: none;
+  color: #2980B9;
+}
